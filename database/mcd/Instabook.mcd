@@ -1,0 +1,16 @@
+TAG: id, name, created_at, updated_at
+HAS, 0N PHOTO, 0N TAG
+PHOTO: id, title, description, file, date, resolution, width, height, created_at, updated_at
+GROUP_PHOTO, 11 PHOTO, 0N GROUP
+
+HAS_COMMENT, 0N PHOTO, 11 COMMENT
+OWNER,0N USER, 01 PHOTO
+PHOTO_USER, 0N USER, 0N PHOTO
+GROUP: id, name, description, created_at, updated_at
+
+COMMENT: id, text, created_at, updated_at
+MAKE_COMMENT, 0N USER, 01 COMMENT
+USER: id, name, email, email_verified_at, password, remember_token, created_at, updated_at
+GROUP_USER, 0N USER, 0N GROUP
+
+REPLY_TO, 01 COMMENT, 0N COMMENT

@@ -1,0 +1,205 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="549" height="542" view_box="0 0 549 542"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Wed, 09 Dec 2020 07:04:22</desc>
+
+<rect id="frame" x="0" y="0" width="549" height="542" fill="#ffffbf" stroke="none" stroke-width="0"/>
+
+<!-- Association HAS_COMMENT -->
+<line x1="346" y1="111" x2="64" y2="263" stroke="#66c2a5" stroke-width="2"/>
+<text x="279" y="128.761882612" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<line x1="64" y1="398" x2="64" y2="263" stroke="#66c2a5" stroke-width="2"/>
+<text x="69.0" y="339" fill="#d53e4f" font-family="Verdana" font-size="12">1,1</text>
+<g id="association-HAS_COMMENT">
+	<path d="M 105 238 a 14 14 90 0 1 14 14 V 263 h -110 V 252 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 119 263.0 v 11 a 14 14 90 0 1 -14 14 H 23 a 14 14 90 0 1 -14 -14 V 263.0 H 110" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="9" y="238" width="110" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="9" y1="263" x2="119" y2="263" stroke="#66c2a5" stroke-width="1"/>
+	<text x="16" y="255.7" fill="#000000" font-family="Verdana" font-size="12">HAS_COMMENT</text>
+</g>
+
+<!-- Association GROUP_USER -->
+<line x1="346" y1="398" x2="486" y2="398" stroke="#66c2a5" stroke-width="2"/>
+<text x="409" y="415.0" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<line x1="486" y1="263" x2="486" y2="398" stroke="#66c2a5" stroke-width="2"/>
+<text x="491.0" y="339" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-GROUP_USER">
+	<path d="M 522 373 a 14 14 90 0 1 14 14 V 398 h -100 V 387 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 536 398.0 v 11 a 14 14 90 0 1 -14 14 H 450 a 14 14 90 0 1 -14 -14 V 398.0 H 100" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="436" y="373" width="100" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="436" y1="398" x2="536" y2="398" stroke="#66c2a5" stroke-width="1"/>
+	<text x="443" y="390.7" fill="#000000" font-family="Verdana" font-size="12">GROUP_USER</text>
+</g>
+
+<!-- Association PHOTO_USER -->
+<line x1="346" y1="398" x2="346" y2="263" stroke="#66c2a5" stroke-width="2"/>
+<text x="351.0" y="305" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<line x1="346" y1="111" x2="346" y2="263" stroke="#66c2a5" stroke-width="2"/>
+<text x="351.0" y="230" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-PHOTO_USER">
+	<path d="M 381 238 a 14 14 90 0 1 14 14 V 263 h -98 V 252 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 395 263.0 v 11 a 14 14 90 0 1 -14 14 H 311 a 14 14 90 0 1 -14 -14 V 263.0 H 98" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="297" y="238" width="98" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="297" y1="263" x2="395" y2="263" stroke="#66c2a5" stroke-width="1"/>
+	<text x="304" y="255.7" fill="#000000" font-family="Verdana" font-size="12">PHOTO_USER</text>
+</g>
+
+<!-- Association REPLY_TO -->
+<path d="M64 398 C 127.333333333 383.0 171.333333333 419.666666667 196 508" fill="none" stroke="#66c2a5" stroke-width="2"/>
+<text x="109" y="417.834348778" fill="#d53e4f" font-family="Verdana" font-size="12">0,1</text>
+<path d="M64 398 C 60.7868852459 464.21129326 104.786885246 500.877959927 196 508" fill="none" stroke="#66c2a5" stroke-width="2"/>
+<text x="91.834348778" y="466" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-REPLY_TO">
+	<path d="M 221 483 a 14 14 90 0 1 14 14 V 508 h -78 V 497 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 235 508.0 v 11 a 14 14 90 0 1 -14 14 H 171 a 14 14 90 0 1 -14 -14 V 508.0 H 78" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="157" y="483" width="78" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="157" y1="508" x2="235" y2="508" stroke="#66c2a5" stroke-width="1"/>
+	<text x="164" y="500.7" fill="#000000" font-family="Verdana" font-size="12">REPLY_TO</text>
+</g>
+
+<!-- Association GROUP_PHOTO -->
+<line x1="346" y1="111" x2="486" y2="111" stroke="#66c2a5" stroke-width="2"/>
+<text x="391" y="128.0" fill="#d53e4f" font-family="Verdana" font-size="12">1,1</text>
+<line x1="486" y1="263" x2="486" y2="111" stroke="#66c2a5" stroke-width="2"/>
+<text x="491.0" y="196" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-GROUP_PHOTO">
+	<path d="M 526 86 a 14 14 90 0 1 14 14 V 111 h -108 V 100 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 540 111.0 v 11 a 14 14 90 0 1 -14 14 H 446 a 14 14 90 0 1 -14 -14 V 111.0 H 108" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="432" y="86" width="108" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="432" y1="111" x2="540" y2="111" stroke="#66c2a5" stroke-width="1"/>
+	<text x="439" y="103.7" fill="#000000" font-family="Verdana" font-size="12">GROUP_PHOTO</text>
+</g>
+
+<!-- Association MAKE_COMMENT -->
+<line x1="346" y1="398" x2="196" y2="398" stroke="#66c2a5" stroke-width="2"/>
+<text x="261" y="415.0" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<line x1="64" y1="398" x2="196" y2="398" stroke="#66c2a5" stroke-width="2"/>
+<text x="109" y="390.0" fill="#d53e4f" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-MAKE_COMMENT">
+	<path d="M 242 373 a 14 14 90 0 1 14 14 V 398 h -120 V 387 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 256 398.0 v 11 a 14 14 90 0 1 -14 14 H 150 a 14 14 90 0 1 -14 -14 V 398.0 H 120" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="136" y="373" width="120" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="136" y1="398" x2="256" y2="398" stroke="#66c2a5" stroke-width="1"/>
+	<text x="143" y="390.7" fill="#000000" font-family="Verdana" font-size="12">MAKE_COMMENT</text>
+</g>
+
+<!-- Association OWNER -->
+<line x1="346" y1="398" x2="196" y2="263" stroke="#66c2a5" stroke-width="2"/>
+<text x="261" y="356.254583291" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<line x1="346" y1="111" x2="196" y2="263" stroke="#66c2a5" stroke-width="2"/>
+<text x="280" y="150.538110255" fill="#d53e4f" font-family="Verdana" font-size="12">0,1</text>
+<g id="association-OWNER">
+	<path d="M 213 238 a 14 14 90 0 1 14 14 V 263 h -62 V 252 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 227 263.0 v 11 a 14 14 90 0 1 -14 14 H 179 a 14 14 90 0 1 -14 -14 V 263.0 H 62" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="165" y="238" width="62" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="165" y1="263" x2="227" y2="263" stroke="#66c2a5" stroke-width="1"/>
+	<text x="172" y="255.7" fill="#000000" font-family="Verdana" font-size="12">OWNER</text>
+</g>
+
+<!-- Association HAS -->
+<line x1="346" y1="111" x2="196" y2="111" stroke="#66c2a5" stroke-width="2"/>
+<text x="279" y="103.0" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<line x1="64" y1="111" x2="196" y2="111" stroke="#66c2a5" stroke-width="2"/>
+<text x="109" y="128.0" fill="#d53e4f" font-family="Verdana" font-size="12">0,N</text>
+<g id="association-HAS">
+	<path d="M 202 86 a 14 14 90 0 1 14 14 V 111 h -40 V 100 a 14 14 90 0 1 14 -14" fill="#abdda4" stroke="#abdda4" stroke-width="0"/>
+	<path d="M 216 111.0 v 11 a 14 14 90 0 1 -14 14 H 190 a 14 14 90 0 1 -14 -14 V 111.0 H 40" fill="#e6f598" stroke="#e6f598" stroke-width="0"/>
+	<rect x="176" y="86" width="40" height="50" fill="none" rx="14" stroke="#66c2a5" stroke-width="2"/>
+	<line x1="176" y1="111" x2="216" y2="111" stroke="#66c2a5" stroke-width="1"/>
+	<text x="183" y="103.7" fill="#000000" font-family="Verdana" font-size="12">HAS</text>
+</g>
+
+<!-- Entity COMMENT -->
+<g id="entity-COMMENT">
+	<g id="frame-COMMENT">
+		<rect x="24" y="347" width="80" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="24" y="372.0" width="80" height="77" fill="#fee08b" stroke="#fee08b" stroke-width="0"/>
+		<rect x="24" y="347" width="80" height="102" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="24" y1="372" x2="104" y2="372" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="32" y="364.7" fill="#000000" font-family="Verdana" font-size="12">COMMENT</text>
+	<text x="29" y="389.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="29" y1="392" x2="41" y2="392" stroke="#000000" stroke-width="1"/>
+	<text x="29" y="406.8" fill="#000000" font-family="Verdana" font-size="12">text</text>
+	<text x="29" y="423.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+	<text x="29" y="440.8" fill="#000000" font-family="Verdana" font-size="12">updated_at</text>
+</g>
+
+<!-- Entity PHOTO -->
+<g id="entity-PHOTO">
+	<g id="frame-PHOTO">
+		<rect x="306" y="9" width="80" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="306" y="34.0" width="80" height="179" fill="#fee08b" stroke="#fee08b" stroke-width="0"/>
+		<rect x="306" y="9" width="80" height="204" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="306" y1="34" x2="386" y2="34" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="324" y="26.7" fill="#000000" font-family="Verdana" font-size="12">PHOTO</text>
+	<text x="311" y="51.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="311" y1="54" x2="323" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="311" y="68.7" fill="#000000" font-family="Verdana" font-size="12">title</text>
+	<text x="311" y="85.7" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="311" y="102.7" fill="#000000" font-family="Verdana" font-size="12">file</text>
+	<text x="311" y="119.8" fill="#000000" font-family="Verdana" font-size="12">date</text>
+	<text x="311" y="136.8" fill="#000000" font-family="Verdana" font-size="12">resolution</text>
+	<text x="311" y="153.8" fill="#000000" font-family="Verdana" font-size="12">width</text>
+	<text x="311" y="170.8" fill="#000000" font-family="Verdana" font-size="12">height</text>
+	<text x="311" y="187.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+	<text x="311" y="204.8" fill="#000000" font-family="Verdana" font-size="12">updated_at</text>
+</g>
+
+<!-- Entity TAG -->
+<g id="entity-TAG">
+	<g id="frame-TAG">
+		<rect x="24" y="60" width="80" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="24" y="85.0" width="80" height="77" fill="#fee08b" stroke="#fee08b" stroke-width="0"/>
+		<rect x="24" y="60" width="80" height="102" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="24" y1="85" x2="104" y2="85" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="51" y="77.7" fill="#000000" font-family="Verdana" font-size="12">TAG</text>
+	<text x="29" y="102.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="29" y1="105" x2="41" y2="105" stroke="#000000" stroke-width="1"/>
+	<text x="29" y="119.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="29" y="136.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+	<text x="29" y="153.8" fill="#000000" font-family="Verdana" font-size="12">updated_at</text>
+</g>
+
+<!-- Entity GROUP -->
+<g id="entity-GROUP">
+	<g id="frame-GROUP">
+		<rect x="446" y="204" width="80" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="446" y="229.0" width="80" height="93" fill="#fee08b" stroke="#fee08b" stroke-width="0"/>
+		<rect x="446" y="204" width="80" height="118" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="446" y1="229" x2="526" y2="229" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="464" y="221.7" fill="#000000" font-family="Verdana" font-size="12">GROUP</text>
+	<text x="451" y="246.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="451" y1="249" x2="463" y2="249" stroke="#000000" stroke-width="1"/>
+	<text x="451" y="263.8" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="451" y="280.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="451" y="297.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+	<text x="451" y="314.8" fill="#000000" font-family="Verdana" font-size="12">updated_at</text>
+</g>
+
+<!-- Entity USER -->
+<g id="entity-USER">
+	<g id="frame-USER">
+		<rect x="288" y="313" width="116" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="288" y="338.0" width="116" height="145" fill="#fee08b" stroke="#fee08b" stroke-width="0"/>
+		<rect x="288" y="313" width="116" height="170" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="288" y1="338" x2="404" y2="338" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="329" y="330.7" fill="#000000" font-family="Verdana" font-size="12">USER</text>
+	<text x="293" y="355.7" fill="#000000" font-family="Verdana" font-size="12">id</text>
+	<line x1="293" y1="358" x2="305" y2="358" stroke="#000000" stroke-width="1"/>
+	<text x="293" y="372.7" fill="#000000" font-family="Verdana" font-size="12">name</text>
+	<text x="293" y="389.7" fill="#000000" font-family="Verdana" font-size="12">email</text>
+	<text x="293" y="406.8" fill="#000000" font-family="Verdana" font-size="12">email_verified_at</text>
+	<text x="293" y="423.8" fill="#000000" font-family="Verdana" font-size="12">password</text>
+	<text x="293" y="440.8" fill="#000000" font-family="Verdana" font-size="12">remember_token</text>
+	<text x="293" y="457.8" fill="#000000" font-family="Verdana" font-size="12">created_at</text>
+	<text x="293" y="474.8" fill="#000000" font-family="Verdana" font-size="12">updated_at</text>
+</g>
+</svg>

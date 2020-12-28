@@ -1,0 +1,75 @@
+MAKE_ATTACHMENT, 0N USER, 01 ATTACHMENT
+USER: id, name, email, email_verified_at, password, remember_token, created_at, updated_at
+MAKE_COMMENT, 0N USER, 01 COMMENT
+COMMENT: id, text, created_at, updated_at
+
+
+ATTACHMENT: id, file, filename, size, type, created_at, updated_at
+OWNER,0N USER, 01 GROUP
+GROUP: id, title, description, created_at, updated_at
+GROUP_USER, 0N USER, 0N GROUP
+PHOTO_USER, 0N USER, 0N PHOTO
+HAS_COMMENT, 0N PHOTO, 11 COMMENT
+
+GROUP_PHOTO, 11 PHOTO, 0N GROUP
+
+HAS_ATTACHMENT, 0N PHOTO, 11 ATTACHMENT
+PHOTO: id, title, description, due_date, state, created_at, updated_at
+HAS, 01 PHOTO, 0N CATEGORY
+CATEGORY: id, name, created_at, updated_at
+
+%% V2.0
+:
+USER: id, name, email, email_verified_at, password, remember_token, created_at, updated_at
+MAKE_COMMENT, 0N USER, 01 COMMENT
+COMMENT: id, text, created_at, updated_at
+
+
+:
+OWNER,0N USER, 01 PHOTO
+GROUP: id, title, description, created_at, updated_at
+GROUP_USER, 0N USER, 0N GROUP
+PHOTO_USER, 0N USER, 0N PHOTO
+HAS_COMMENT, 0N PHOTO, 11 COMMENT
+
+GROUP_PHOTO, 11 PHOTO, 0N GROUP
+
+:
+PHOTO: id, title, description, due_date, state, created_at, updated_at
+HAS, 01 PHOTO, 0N CATEGORY
+CATEGORY: id, name, created_at, updated_at
+
+
+--- V2.1 Cool UI , mais encore des relations à changer : 
+CATEGORY: id, name, created_at, updated_at
+HAS, 01 PHOTO, 0N CATEGORY
+PHOTO: id, title, description, due_date, state, created_at, updated_at
+GROUP_PHOTO, 11 PHOTO, 0N GROUP
+
+HAS_COMMENT, 0N PHOTO, 11 COMMENT
+OWNER,0N USER, 01 PHOTO
+PHOTO_USER, 0N USER, 0N PHOTO
+GROUP: id, title, description, created_at, updated_at
+
+COMMENT: id, text, created_at, updated_at
+MAKE_COMMENT, 0N USER, 01 COMMENT
+USER: id, name, email, email_verified_at, password, remember_token, created_at, updated_at
+GROUP_USER, 0N USER, 0N GROUP
+
+---- V2.2 Mieux 
+TAG: id, name, created_at, updated_at
+HAS, 0N PHOTO, 0N TAG
+PHOTO: id, title, description, date, resolution, width, height, created_at, updated_at
+GROUP_PHOTO, 11 PHOTO, 0N GROUP
+
+HAS_COMMENT, 0N PHOTO, 11 COMMENT
+OWNER,0N USER, 01 PHOTO
+PHOTO_USER, 0N USER, 0N PHOTO
+GROUP: id, title, description, created_at, updated_at
+
+COMMENT: id, text, created_at, updated_at
+MAKE_COMMENT, 0N USER, 01 COMMENT
+USER: id, name, email, email_verified_at, password, remember_token, created_at, updated_at
+GROUP_USER, 0N USER, 0N GROUP
+
+REPLY_TO, 01 COMMENT, 0N COMMENT
