@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
+
+    public function photos(){return $this->belongsToMany(Photo::class)->using(PhotoTag::class)->withPivot('id')->withTimestamps();}
 }
+

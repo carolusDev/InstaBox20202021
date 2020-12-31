@@ -8,14 +8,14 @@ use Tests\TestCase;
 
 /**
  * Ces tests vérifient les relations belongsToMany et l'existance de classe pivot entre les modèles. Ces relations correspondent aux cardinalités n..n
- * Pour passer les tests de cette classe, vous aurez besoin d'avoir créé les modèles et les relations utilisées dans les fonctions de tests.  : 
+ * Pour passer les tests de cette classe, vous aurez besoin d'avoir créé les modèles et les relations utilisées dans les fonctions de tests.  :
  * https://laravel.com/docs/8.x/eloquent-relationships#many-to-many
- * 
+ *
  */
 class D_ManyToManyRelationTest extends TestCase
 {
 
-    
+
     // TODO : GROUP_USER
 
     /**
@@ -32,7 +32,7 @@ class D_ManyToManyRelationTest extends TestCase
         // Test 2: Les utilisateurs sont bien liés au groupe et sont bien une collection.
         $this->assertInstanceOf('Illuminate\Database\Eloquent\Collection', $group->users);
 
-        //Aide : 
+        //Aide :
         $this->assertInstanceOf('\Illuminate\Database\Eloquent\Relations\BelongsToMany', $group->users());
     }
 
@@ -75,7 +75,7 @@ class D_ManyToManyRelationTest extends TestCase
     // TODO : PHOTO_USER
     /**
      * Teste la relation entre le modèle Photo et le modèle User (pour les photos sur lequel l'utilisateur apparait)
-     * 
+     *
      * @return void
      */
     public function testUserAppearsOnManyPhoto()
@@ -90,7 +90,7 @@ class D_ManyToManyRelationTest extends TestCase
 
     /**
      * Teste la relation entre le modèle Photo et le modèle User (pour les utilisateur qui apparaissent sur la photo)
-     * 
+     *
      * @return void
      */
     public function testPhotoBelongsToManyUser()
@@ -129,7 +129,7 @@ class D_ManyToManyRelationTest extends TestCase
     // TODO : PHOTO_TAG
     /**
      * Teste la relation entre le modèle Photo et le modèle Tag
-     * 
+     *
      * @return void
      */
     public function testPhotoBelongsToManyTag()
@@ -156,7 +156,7 @@ class D_ManyToManyRelationTest extends TestCase
 
     /**
      * Teste la relation entre le modèle Photo et le modèle Tag
-     * 
+     *
      * @return void
      */
     public function testTagBelongsToManyPhoto()
@@ -178,3 +178,15 @@ class D_ManyToManyRelationTest extends TestCase
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

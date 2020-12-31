@@ -9,16 +9,16 @@ use Tests\TestCase;
 
 /**
  * Ces tests vérifient les contraintes de clés étrangères et d'unicités (pas encore les notions de suppressions)
- * Pour passer les tests de cette classe, vous aurez besoin d'avoir créé les modèles (pour l'instant sans relations) : 
+ * Pour passer les tests de cette classe, vous aurez besoin d'avoir créé les modèles (pour l'instant sans relations) :
  * https://laravel.com/docs/8.x/eloquent
- * ainsi que les factories associées à chacun des modèles : 
- * https://laravel.com/docs/8.x/database-testing#creating-models-using-factories.  
- * 
+ * ainsi que les factories associées à chacun des modèles :
+ * https://laravel.com/docs/8.x/database-testing#creating-models-using-factories.
+ *
  */
 class B_DatabaseIntegrityConstraintTest extends TestCase
 {
 
-       
+
     // Gestion des contraintes de clés étrangères provenant de cardinalités 1..n
     // Gestion des contraintes sur les tables d'association / modèles pivots (cardinalités n..n)
 
@@ -27,19 +27,19 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
      *
      * @return void
      */
-    public function testGroupUserDatabaseThrowsIntegrityConstraintExceptionOnNonExistingUserId() 
+    public function testGroupUserDatabaseThrowsIntegrityConstraintExceptionOnNonExistingUserId()
     {
         $this->expectException("Illuminate\Database\QueryException");
         $this->expectExceptionCode(23000);
         GroupUser::factory()->create(['user_id' =>0]);
     }
-    
+
     /**
      * Vérifie que la contrainte de clé étrangère pour le groupe est bien prise en compte dans la table liée au modèle GroupUser
      *
      * @return void
      */
-    public function testGroupUserDatabaseThrowsIntegrityConstraintExceptionOnNonExistingGroupId() 
+    public function testGroupUserDatabaseThrowsIntegrityConstraintExceptionOnNonExistingGroupId()
     {
         $this->expectException("Illuminate\Database\QueryException");
         $this->expectExceptionCode(23000);
@@ -52,7 +52,7 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
      *
      * @return void
      */
-    public function testGroupUserDatabaseThrowsIntegrityConstraintExceptionOnDuplicateEntry() 
+    public function testGroupUserDatabaseThrowsIntegrityConstraintExceptionOnDuplicateEntry()
     {
         $this->expectException("Illuminate\Database\QueryException");
         $this->expectExceptionCode(23000);
@@ -68,7 +68,7 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
      *
      * @return void
      */
-    public function testPhotoTagDatabaseThrowsIntegrityConstraintExceptionOnNonExistingPhotoId() 
+    public function testPhotoTagDatabaseThrowsIntegrityConstraintExceptionOnNonExistingPhotoId()
     {
         $this->expectException("Illuminate\Database\QueryException");
         $this->expectExceptionCode(23000);
@@ -80,13 +80,13 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
      *
      * @return void
      */
-    public function testPhotoTagDatabaseThrowsIntegrityConstraintExceptionOnNonExistingUserId() 
+    public function testPhotoTagDatabaseThrowsIntegrityConstraintExceptionOnNonExistingUserId()
     {
         $this->expectException("Illuminate\Database\QueryException");
         $this->expectExceptionCode(23000);
         PhotoTag::factory()->create(['tag_id' =>0]);
     }
-    
+
     //TODO : contraintes d'unicité
 
 
@@ -95,7 +95,7 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
      *
      * @return void
      */
-    public function testPhotoTagDatabaseThrowsIntegrityConstraintExceptionOnDuplicateEntry() 
+    public function testPhotoTagDatabaseThrowsIntegrityConstraintExceptionOnDuplicateEntry()
     {
 
         $this->expectException("Illuminate\Database\QueryException");
@@ -107,12 +107,12 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
 
 
     //PHOTO_USER
-        /**
+    /**
      * Vérifie que la contrainte d'unicité est bien prise en compte dans la table liée au modèle GroupUser
      *
      * @return void
      */
-    public function testPhotoUserDatabaseThrowsIntegrityConstraintExceptionOnDuplicateEntry() 
+    public function testPhotoUserDatabaseThrowsIntegrityConstraintExceptionOnDuplicateEntry()
     {
 
         $this->expectException("Illuminate\Database\QueryException");
@@ -122,3 +122,21 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
         PhotoUser::factory()->create(['photo_id' => $photo->id, 'user_id' => $user->id]);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
