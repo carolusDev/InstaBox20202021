@@ -1,75 +1,50 @@
-# Instabook : partage de photos avec des groupes d'ami. 
+# Instabook : partage de photos avec des groupes d'amis. 
 
-## Contexte
-L'objectif de cette application est de pouvoir créer des groupes d'amis, poster des photos accessibles par le groupe. 
-Pour chaque photo, on peut "tagger" les membres du groupe qui y apparaissent. Chaque photo peut-être commentée par un membre du groupe, et chaque membre du groupe peut répondre à un commentaire. 
+## Démarche
+Je me suis servi de l'enregistrement de vos cours ainsi que de chaines youtubes pour avancer dans le projet.
+J'ai également pas mal lu la doc 
 
-## Étape de réalisation 
+## Difficultés rencontrés
+J'ai eu des difficultés sur la connexion avec la base de données semble t'il. Ce que je ne comprends pas c'est que 
+sur mes premières versions du projet ToDo je n'avais pas ce genre de problème, hors je n'ai rien changé à ma base de 
+données. De plus j'ai suivie à la lettre toutes vos recommandations et celles de Stack.
+J'ai bien vérifié, mon mot de passe et le nom de ma db utilisé dans PhpMyAdmin sont bien identiques à ceux 
+présents dans mon .env.
+Je vous joins si dessous le résultat obtenu après avoir lancé la commande : php artisan migrate
 
-L'objectif est de concevoir les fichiers de migrations, les factories nécessaires aux tests, les modèles Eloquent et les relations entre les modèles. 
+```bash
+PS C:\xampp\htdocs\Ynov\Laravel\InstaBox\instabook> php artisan migrate
+**************************************
+*     Application In Production!     *
+**************************************
 
-Ce projet pourra être étendu par la suite. 
+ Do you really wish to run this command? (yes/no) [no]:
+ > yes
 
-### Récupération du projet et préparation de votre dépôt pour le rendu 
 
-1. Cloner le dépôt 
-2. Rentrez dans le dépot : `cd instabook`
-3. "Dégiter" le dépôt : `rm -rf .git`
-4. Initialiser git : `git init`
-5. Créez votre dépôt de rendu sur git, sans README, ni aucune autre case cochée
-6. Suivez les instructions indiquées sur git (`git add .`, `git commit -m"initial commit`, `git remote add origin url_de_votre_depot`)
-7. Vous pouvez (mais n'êtes pas obligé) rajouter comme second dépôt distant le dépôt actuel : `git remote add prof )
-8. Faites votre premier push : `git push -u  origin master`. 
+   Illuminate\Database\QueryException
 
-### Création d'une base de données, 
+  SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO) (SQL: select * from information_schema.tables where table_schema = forge and table_name = migrations and table_type = 'BASE TABLE')
 
-Vous aurez à créer une base de données dans MySQL : 
-`sudo mysql`
-Une fois dans mysql 
+  at C:\xampp\htdocs\Ynov\Laravel\InstaBox\instabook\vendor\laravel\framework\src\Illuminate\Database\Connection.php:678
+    674â–•         // If an exception occurs when attempting to run a query, we'll format the error
+    675â–•         // message to include the bindings with SQL, which will make this exception a
+    676â–•         // lot more helpful to the developer instead of just the database's errors.
+    677â–•         catch (Exception $e) {
+  âžœ 678â–•             throw new QueryException(
+    679â–•                 $query, $this->prepareBindings($bindings), $e
+    680â–•             );
+    681â–•         }
+    682â–•
 
-```sql 
-CREATE DATABASE instabook;
- -- CREATE USER  laravel@localhost IDENTIFIED BY 'L4R4V3l' ; --  À faire si vous n'avez pas déjà un utilisateur autre que root
- -- On donne les droit à l'utilisateur
- GRANT ALL ON instabook.* TO laravel@localhost; 
+  1   C:\xampp\htdocs\Ynov\Laravel\InstaBox\instabook\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:70
+      PDOException::("SQLSTATE[HY000] [1045] Access denied for user 'forge'@'localhost' (using password: NO)")
+
+  2   C:\xampp\htdocs\Ynov\Laravel\InstaBox\instabook\vendor\laravel\framework\src\Illuminate\Database\Connectors\Connector.php:70
+      PDO::__construct("mysql:host=127.0.0.1;port=3306;dbname=forge", "forge", "", [])
+PS C:\xampp\htdocs\Ynov\Laravel\InstaBox\instabook>
 ```
 
-Copier le fichier `.env.example` en `.env` : 
-```sh 
-cp .env.example .env
-```
-Et remplissez les informations propres à la BDD. 
-
-
-Installer le projet à l'aide de composer : 
-```sh
-composer install
-```
-
-Créer une clé pour le .env
-```sh
-php artisan key:generate
-```
-
-À vous de jouer !!!
-
-
-### Les jeux de tests
-Afin de faciliter le développement, les jeux de tests sont numérotés pour être passé par étapes. Un `seeder` a été fourni pour remplir la base de donnée avec un jeu de donnée valide. pour que celui ci s'execute bien, vous aurez besoin des factories (fournies), ainsi que des modèles. 
-Vous aurez aussi besoin d'avoir créé les modèles et vérifié que chacun à bien le trait hasFactory (`use hasFactory;`).
-Le modèle Photo est fourni avec une relation nécessaire pour le remplissage de la base. 
-
-
-Ainsi la première étape concernent simplement la structure de la base données, sans prendre en compte les contraintes de clés étrangères, ni d'unicité. Il y a besoin des fichiers de migration, ainsi que des factory qui sont fournies pour cette étape. 
-
-Si vous rencontrez des problèmes dès cette étape, essayer de réinitialiser la base de données et les jeux de test avec la commande suivante : 
-```sh
-php artisan migrate:fresh --seed
-```
-
-Ensuite, il est nécessaire de coder les relations dans les modèles, pour pouvoir tester les contraintes d'unicité et de clés étrangères, dans leur forme simplifiées, c’est-à-dire sans relations complexes. 
-
-Enfin, il faudra intégrer certaines règles de gestions, telles que l'appartenance à groupe d'une photo pour être mentionné comme apparaissant sur la photo. 
-  - Un commentaire ne peut être que fait que par un utilisateur qui appartient au même groupe que la photo
-  - La photo n'est créée que si son propriétaire appartient bien au même groupe que la photo
-  - Un utilisateur ne peut être ajouté à une photo que si il est dans le même groupe que la photo
+## Solutions trouvées
+Et bien j'ai essayé pas mal de solutions sur divers sites, sans grand succès, puis à la fin ça ressemblait plus à 
+de la magie noire, mais pas plus de succès ... 

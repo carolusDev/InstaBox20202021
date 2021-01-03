@@ -14,6 +14,7 @@ class CommentFactory extends Factory
 
     public function definition()
     {
-        return ['user_id' => User::factory(), 'photo_id' => Photo::factory(), 'text' => $this->faker->text, 'comment_id' => null, 'created_at' => now(), 'updated_at' => now(),];
+        return ['user_id' => User::factory(), 'photo_id' => Photo::factory(), 'text' => $this->faker->text,
+            'comment_id' => null, 'created_at' => now(), 'updated_at' => now(),];
     }
 }

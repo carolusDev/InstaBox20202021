@@ -11,7 +11,8 @@ class CreateGroupUserTable extends Migration
     {
         Schema::create('group_user', function (Blueprint $table) {
             $table->id();$table->foreignId("user_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("group_id")->constrained()->cascadeOnDelete();$table->unique(["user_id", "group_id"]);$table->timestamps();});
+            $table->foreignId("group_id")->constrained()->cascadeOnDelete();
+            $table->unique(["user_id", "group_id"]);$table->timestamps();});
     }
 
     public function down()

@@ -10,8 +10,8 @@ class Photo extends Model
     use HasFactory;
 
     protected static function booted()
-    {static::creating(function ($p)
-        {return !is_null($p->owner->groups->find($p->group));});}
+    {static::creating(function ($var)
+        {return !is_null($var->owner->groups->find($var->group));});}
 
     public function comments()
     {return $this->hasMany(Comment::class);}

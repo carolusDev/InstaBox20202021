@@ -16,7 +16,6 @@ class User extends Authenticatable
     protected $casts = ['email_verified_at' => 'datetime',];
 
     public function photos() {return $this->hasMany(Photo::class);}
-    public function photosAppearance() {return $this->belongsToMany(Photo::class)->using(PhotoUser::class)->withPivot('id')->withTimestamps();}
     public function groups() {return $this->belongsToMany(Group::class)->using(GroupUser::class)->withTimestamps();}
     public function comments() {return $this->hasMany(Comment::class);}
 }

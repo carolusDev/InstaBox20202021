@@ -14,5 +14,4 @@ class PhotoTag extends Pivot
 
     public function photo()
     {return $this->belongsTo(Photo::class);}
-
 }

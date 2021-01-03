@@ -19,17 +19,21 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Tag::factory()->count(10)->create();$tags = Tag::all();
-        User::factory()->count(5)->create();$group = Group::factory()->create();
+        Tag::factory()->count(20)->create();$tags = Tag::all();
+        User::factory()->count(20)->create();$group = Group::factory()->create();
         $users = User::all();
+
         foreach($users as $user)
         {GroupUser::factory()->create(['group_id' => $group->id, 'user_id' => $user->id]);}
-        Photo::factory()->count(10)->create(['group_id' => $group->id, 'user_id' => $users->random()->id]);
+        Photo::factory()->count(20)->create(['group_id' => $group->id, 'user_id' => $users->random()->id]);
         $photos = Photo::all();
+
         foreach($photos as $photo)
-        {Comment::factory()->count(rand(1,5))->create(['user_id' =>  $users->random()->id, 'photo_id' => $photo->id]);
-        foreach($tags->random(rand(1,3)) as $tag) {PhotoTag::factory()->create(['photo_id' => $photo->id, 'tag_id' => $tag->id]);}}
+        {Comment::factory()->count(rand(1,20))->create(['user_id' =>  $users->random()->id, 'photo_id' => $photo->id]);
+
+        foreach($tags->random(rand(1,20)) as $tag) {PhotoTag::factory()->create(['photo_id' => $photo->id, 'tag_id' => $tag->id]);}}
         $photoRandom = Photo::all()->random();
-        Comment::factory()->count(rand(1,5))->create(['user_id' =>  $users->random()->id, 'photo_id' => $photoRandom->id, 'comment_id' => $photoRandom->comments->random()]);
+        Comment::factory()->count(rand(1,20))->create(['user_id' =>  $users->random()->id,
+            'photo_id' => $photoRandom->id, 'comment_id' => $photoRandom->comments->random()]);
     }
 }

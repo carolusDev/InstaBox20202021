@@ -11,7 +11,8 @@ class CreatePhotoUserTable extends Migration
     {
         Schema::create('photo_user', function (Blueprint $table) {
             $table->id();$table->foreignId("photo_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("user_id")->constrained()->cascadeOnDelete();$table->unique(["photo_id", "user_id"]);$table->timestamps();});
+            $table->foreignId("user_id")->constrained()->cascadeOnDelete();
+            $table->unique(["photo_id", "user_id"]);$table->timestamps();});
     }
 
     public function down()
