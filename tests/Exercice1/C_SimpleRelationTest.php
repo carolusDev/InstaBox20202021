@@ -212,15 +212,3 @@ class C_SimpleRelationTest extends TestCase
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

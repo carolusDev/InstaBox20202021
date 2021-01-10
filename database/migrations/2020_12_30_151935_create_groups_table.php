@@ -6,13 +6,28 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateGroupsTable extends Migration
 {
-
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('groups', function (Blueprint $table) {
-            $table->id();$table->string('name');$table->text('description');$table->timestamps();});
+            $table->id();
+            $table->string('name');
+            $table->text('description');
+            $table->timestamps();
+        });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
-    {Schema::dropIfExists('groups');}
+    {
+        Schema::dropIfExists('groups');
+    }
 }

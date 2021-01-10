@@ -178,15 +178,3 @@ class D_ManyToManyRelationTest extends TestCase
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-

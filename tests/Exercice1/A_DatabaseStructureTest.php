@@ -149,21 +149,3 @@ class A_DatabaseStructureTest extends TestCase
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

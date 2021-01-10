@@ -6,16 +6,35 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateGroupUserTable extends Migration
 {
-
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('group_user', function (Blueprint $table) {
-            $table->id();$table->foreignId("user_id")->constrained()->cascadeOnDelete();
-            $table->foreignId("group_id")->constrained()->cascadeOnDelete();
-            $table->unique(["user_id", "group_id"]);$table->timestamps();});
+            $table->id();
+
+            $table->foreignId("user_id")
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->foreignId("group_id")
+                ->constrained()
+                ->cascadeOnDelete();
+
+            $table->unique(["user_id", "group_id"]);
+            $table->timestamps();
+        });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
-    {Schema::dropIfExists('group_user');}
+    {
+        Schema::dropIfExists('group_user');
+    }
 }
-

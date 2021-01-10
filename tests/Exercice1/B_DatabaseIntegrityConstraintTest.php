@@ -122,21 +122,3 @@ class B_DatabaseIntegrityConstraintTest extends TestCase
         PhotoUser::factory()->create(['photo_id' => $photo->id, 'user_id' => $user->id]);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
